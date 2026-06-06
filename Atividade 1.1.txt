@@ -1,0 +1,31 @@
+1. Dado que esteja falando com o assistente
+Quando pergunto sobre um plano chamado diamante
+Então o assistente deve dizer que não encontrou a referencia a esse plano
+E não deve inventar informações
+
+2. Dado que esteja falando com o assistente
+Quando perguntar quais documentos são necessários para a devolução de um item
+E o assistente responder que não possui essas informações
+Então a resposta pode ser considerada invalida, pois existe documentação com as informações de devolução.
+
+3. Dado que esteja falando com o assistente
+Quando fizer uma pergunta em Inlges
+E o assistente me responder em inglês
+Então a resposta deve ser considerada invalida, pois ela deve apenas responder em PT-BR de forma formal.
+
+4. Dado que esteja falando com o assistente
+Quando fizer uma pergunta sobre qualquer informação do sistema
+E o assistente responder com uma informação valida, mas sem trazer a fonte da informação
+Então a resposta deve ser considerada invalida
+
+5. Dado que esteja falando com o assistente
+Quando pergunto sobre meu contrato recente de frete especial
+E minha região seja o sul
+E ele responder que o multiplicador é 1.2
+Então a resposta deve ser considerada invalida, pois a contratação mais recente, vem da PROC-042-v2, onde o valor é 1.3
+
+6. Dado que esteja falando com o assistente
+E já tenha mandado mais de 5 mensagens
+Quando perguntar sobre alguma informação especifica
+E o assistente recuperar a informação de uma conversa anterior
+a resposta deve ser considerada incorreta se basear em informação do histórico de conversa em vez dos chunks recuperados para a pergunta atual — e não apenas "recuperar de conversa anterior" de forma genérica.
